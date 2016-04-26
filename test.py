@@ -23,7 +23,7 @@ class SampleApp(tk.Tk):
         container.grid_rowconfigure(0, weight=1)
         container.grid_columnconfigure(0, weight=1)
         self.frames = {}
-        
+
         for F in (StartPage, PageOne, PageTwo, PageThree):
             page_name = F.__name__
             frame = F(container, self)
@@ -123,51 +123,51 @@ class PageOne(tk.Frame):
 
     def updatetwos(self):
         self.twoscount = mf.twos(mydice)
-        self.ones.set(self.onescount)
+        self.twos.set(self.twoscount)
 
     def updatethrees(self):
-        self.onescount = mf.threes(mydice)
-        self.ones.set(self.onescount)
+        self.threescount = mf.threes(mydice)
+        self.threes.set(self.threescount)
 
     def updatefours(self):
-        self.onescount = mf.fours(mydice)
-        self.ones.set(self.onescount)
+        self.fourscount = mf.fours(mydice)
+        self.fours.set(self.fourscount)
 
     def updatefives(self):
-        self.onescount = mf.fives(mydice)
-        self.ones.set(self.onescount)
+        self.fivescount = mf.fives(mydice)
+        self.fives.set(self.fivescount)
 
     def updatesixes(self):
-        self.onescount = mf.sixes(mydice)
-        self.ones.set(self.onescount)
+        self.sixescount = mf.sixes(mydice)
+        self.sixes.set(self.sixescount)
 
     def updatethreeofakind(self):
-        self.onescount = mf.threeofakind(mydice)
-        self.ones.set(self.onescount)
+        self.threeofakindcount = mf.threeofakind(mydice)
+        self.threeofakind.set(self.threeofakindcount)
 
     def updatefourofakind(self):
-        self.onescount = mf.fourofakind(mydice)
-        self.ones.set(self.onescount)
+        self.fourofakindcount = mf.fourofakind(mydice)
+        self.fourofakind.set(self.fourofakindcount)
 
     def updatefullhouse(self):
-        self.onescount = mf.fullhouse(mydice)
-        self.ones.set(self.onescount)
+        self.fullhousecount = mf.fullhouse(mydice)
+        self.fullhouse.set(self.fullhousecount)
 
     def updatesmallstraight(self):
-        self.onescount = mf.smallstraight(mydice)
-        self.ones.set(self.onescount)
+        self.smallstraightcount = mf.smallstraight(mydice)
+        self.smallstraight.set(self.smallstraightcount)
 
     def updatelargestraight(self):
-        self.onescount = mf.largestraight(mydice)
-        self.ones.set(self.onescount)
+        self.largestraightcount = mf.largestraight(mydice)
+        self.largestraight.set(self.largestraightcount)
 
     def updatechance(self):
-        self.onescount = mf.chance(mydice)
-        self.ones.set(self.onescount)
+        self.chancecount = mf.chance(mydice)
+        self.chance.set(self.chancecount)
 
     def updateyahtzee(self):
-        self.onescount = mf.yahtzee(mydice)
-        self.ones.set(self.onescount)
+        self.yahtzeecount = mf.yahtzee(mydice)
+        self.yahtzee.set(self.yahtzeecount)
     def cowplus(self):
         self.cow_count += 1
         self.cow.set(self.cow_count)
@@ -175,11 +175,11 @@ class PageOne(tk.Frame):
 
 
 
-            
+
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-      
+
         self.cow_count = 1
         self.cow.set(self.cow_count)
 
@@ -197,54 +197,54 @@ class PageOne(tk.Frame):
         spacelabel.grid(row = 1, column = 2)
         oneslabel = tk.Label(self, textvariable = self.ones, width = "14")
         oneslabel.grid(row = 2, column = 1)
-        oneslabel = tk.Label(self, text = "4", width = "14")
+        oneslabel = tk.Label(self, textvariable = self.twos, width = "14")
         oneslabel.grid(row = 3, column = 1)
-        oneslabel = tk.Label(self, text = "4", width = "14")
+        oneslabel = tk.Label(self, textvariable = self.threes, width = "14")
         oneslabel.grid(row = 4, column = 1)
-        oneslabel = tk.Label(self, text = "4", width = "14")
+        oneslabel = tk.Label(self, textvariable = self.fours, width = "14")
         oneslabel.grid(row = 5, column = 1)
-        oneslabel = tk.Label(self, text = "4", width = "14")
+        oneslabel = tk.Label(self, textvariable = self.fives, width = "14")
         oneslabel.grid(row = 6, column = 1)
-        oneslabel = tk.Label(self, text = "4", width = "14")
+        oneslabel = tk.Label(self, textvariable = self.sixes, width = "14")
         oneslabel.grid(row = 7, column = 1)
-        oneslabel = tk.Label(self, text = "4", width = "14")
+        oneslabel = tk.Label(self, textvariable = self.threeofakind, width = "14")
         oneslabel.grid(row = 8, column = 1)
-        oneslabel = tk.Label(self, text = "4", width = "14")
+        oneslabel = tk.Label(self, textvariable = self.fourofakind, width = "14")
         oneslabel.grid(row = 9, column = 1)
-        oneslabel = tk.Label(self, text = "4", width = "14")
+        oneslabel = tk.Label(self, textvariable = self.fullhouse, width = "14")
         oneslabel.grid(row = 10, column = 1)
-        oneslabel = tk.Label(self, text = "4", width = "14")
+        oneslabel = tk.Label(self, textvariable = self.smallstraight, width = "14")
         oneslabel.grid(row = 11, column = 1)
-        oneslabel = tk.Label(self, text = "4", width = "14")
+        oneslabel = tk.Label(self, textvariable = self.largestraight, width = "14")
         oneslabel.grid(row = 12, column = 1)
-        oneslabel = tk.Label(self, text = "4", width = "14")
+        oneslabel = tk.Label(self, textvariable = self.chance, width = "14")
         oneslabel.grid(row = 13, column = 1)
-        oneslabel = tk.Label(self, text = "4", width = "14")
+        oneslabel = tk.Label(self, textvariable = self.yahtzee, width = "14")
         oneslabel.grid(row = 14, column = 1)
-        
-        
+
+
         label = tk.Label(self, text="Select a Section", font=5)
         label.grid(row = 1, column = 0)
-    
+
         buttonMain = tk.Button(self, text="Main Menu", height = "3", width = "14",
                            command=lambda: controller.show_frame("StartPage"))
         buttonRoll = tk.Button(self, text = "Roll", height = "3", width = "14", command = lambda: self.rollupdate())
         buttonScoreOnes = tk.Button(self, text = "Ones", height = "3", width = "14", command = lambda: self.updateones())
-        buttonScoreTwos = tk.Button(self, text = "Twos", height = "3", width = "14", command = mf.twos())
-        buttonScoreThrees = tk.Button(self, text = "Threes", height = "3", width = "14", command = mf.threes())
-        buttonScoreFours = tk.Button(self, text = "Fours", height = "3", width = "14", command = mf.fours())
-        buttonScoreFives = tk.Button(self, text = "Fives", height = "3", width = "14", command = mf.fives())
-        buttonScoreSixes = tk.Button(self, text = "Sixes", height = "3", width = "14", command = mf.sixes())
-        buttonScoreThreeOfAKind = tk.Button(self, text = "Three of a Kind", height = "3", width = "14", command = mf.threeofakind())
-        buttonScoreFourOfAKind = tk.Button(self, text = "Four of a Kind", height = "3", width = "14", command = mf.fourofakind())
-        buttonScoreFullHouse = tk.Button(self, text = "Full House", height = "3", width = "14", command = mf.fullhouse())
-        buttonScoreSmallStraight = tk.Button(self, text = "Small Straight", height = "3", width = "14", command = mf.smallstraight())
-        buttonScoreLargeStraight = tk.Button(self, text = "Large Straight", height = "3", width = "14", command = mf.largestraight())
-        buttonScoreChance = tk.Button(self, text = "Chance", height = "3", width = "14", command = mf.chance())
-        buttonScoreYahtzee = tk.Button(self, text = "Yahtzee", height = "3", width = "14", command = mf.yahtzee())
+        buttonScoreTwos = tk.Button(self, text = "Twos", height = "3", width = "14", command = lambda: self.updatetwos())
+        buttonScoreThrees = tk.Button(self, text = "Threes", height = "3", width = "14", command = lambda: self.updatethrees())
+        buttonScoreFours = tk.Button(self, text = "Fours", height = "3", width = "14", command = lambda: self.updatefours())
+        buttonScoreFives = tk.Button(self, text = "Fives", height = "3", width = "14", command = lambda: self.updatefives())
+        buttonScoreSixes = tk.Button(self, text = "Sixes", height = "3", width = "14", command = lambda: self.updatesixes())
+        buttonScoreThreeOfAKind = tk.Button(self, text = "Three of a Kind", height = "3", width = "14", command = lambda: self.updatethreeofakind())
+        buttonScoreFourOfAKind = tk.Button(self, text = "Four of a Kind", height = "3", width = "14", command = lambda: self.updatefourofakind())
+        buttonScoreFullHouse = tk.Button(self, text = "Full House", height = "3", width = "14", command = lambda: self.updatefullhouse())
+        buttonScoreSmallStraight = tk.Button(self, text = "Small Straight", height = "3", width = "14", command = lambda: self.updatesmallstraight())
+        buttonScoreLargeStraight = tk.Button(self, text = "Large Straight", height = "3", width = "14", command = lambda: self.updatelargestraight())
+        buttonScoreChance = tk.Button(self, text = "Chance", height = "3", width = "14", command = lambda: self.updatechance())
+        buttonScoreYahtzee = tk.Button(self, text = "Yahtzee", height = "3", width = "14", command = lambda: self.updateyahtzee())
 
-       
-        
+
+
         buttonMain.grid(row = 1, column = 10)
         buttonRoll.grid(row = 0, column = 10)
         buttonScoreOnes.grid(row = 2, column = 0)
@@ -260,7 +260,7 @@ class PageOne(tk.Frame):
         buttonScoreLargeStraight.grid(row = 12, column = 0)
         buttonScoreChance.grid(row = 13, column = 0)
         buttonScoreYahtzee.grid(row = 14, column = 0)
-        
+
 
 class PageTwo(tk.Frame):
 
@@ -337,10 +337,9 @@ class PageThree(tk.Frame):
         buttonScoreLargeStraight.pack(side = "left")
         buttonScoreChance.pack(side = "left")
         buttonScoreYahtzee.pack(side = "left")
-      
+
 if __name__ == "__main__":
     app = SampleApp()
     app.title("Botzee")
     app.destroy()
     app.mainloop()
-
